@@ -25,7 +25,7 @@ class ScheduleController extends Controller
         $email=$request->input('email');
         $date = $request->input('date');
         $time = $request->input('time');
-        $start = Carbon::parse($date.$time.'Europe/Belgrade');
+        $start = Carbon::parse($date.' '.$time,'Europe/Belgrade');
         $end = (clone $start)->addHour();
         $event = new Event;
         $event->name = $name;

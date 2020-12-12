@@ -29,7 +29,7 @@ class ScheduleController extends Controller
             $event->description = 'Event description';
             $event->startDateTime = Carbon::now()->addHour();
             $event->endDateTime = Carbon::now()->addHour(2);
-            $event->addAttendee(['email' => 'tsudar1991@gmail.com']);
+            $event->addAttendee(['email' => 'tsudar1991@gmail.com','displayName'=>'Tomislav','comment'=>'06383']);
             $event->sendUpdates ='all';
             $event->reminders=array(
                 'useDefault' => FALSE,

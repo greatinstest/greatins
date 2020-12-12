@@ -20,10 +20,10 @@ class ScheduleController extends Controller
             'phone'=>'required',
             'email'=>'required',
             'date'=>'required']);
-        $name=$request->input('name');
+        $mname=$request->input('name');
         $phone=$request->input('phone');
-        $email=$request->input('email');
-        $time= $request->input('date').' '.$request->input('time');
+        $memail=$request->input('email');
+        $mtime= $request->input('date').' '.$request->input('time');
         
         $event->name = 'FINAL BULL';
             $event->description = 'Event description';

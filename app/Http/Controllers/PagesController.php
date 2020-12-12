@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Spatie\GoogleCalendar\Event;
-
-use Carbon\Carbon;
 
 class PagesController extends Controller
 {
@@ -17,8 +14,7 @@ class PagesController extends Controller
     public function about()
     {
        
-        $e=Event::get();
-        dd($e);
+       return 'about';
         
     }
 }

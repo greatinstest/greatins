@@ -16,11 +16,7 @@ class PagesController extends Controller
     }
     public function about()
     {
-        Event::create([
-            'name' => 'A new event',
-            'startDateTime' => Carbon::now(),
-            'endDateTime' => Carbon::now()->addHour(),
-         ]);
+       
         $e=Event::get();
         dd($e);
         

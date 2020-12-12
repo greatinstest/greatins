@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Spatie\GoogleCalendar\Event;
+
 use Carbon\Carbon;
 
 class PagesController extends Controller
@@ -14,6 +16,13 @@ class PagesController extends Controller
     }
     public function about()
     {
-        return Carbon::now();
+        Event::create([
+            'name' => 'A new event',
+            'startDateTime' => Carbon::now(),
+            'endDateTime' => Carbon::now()->addHour(),
+         ]);
+        $e=Event::get();
+        dd($e);
+        
     }
 }

@@ -23,19 +23,22 @@ class ScheduleController extends Controller
         $name=$request->input('name');
         $phone=$request->input('phone');
         $email=$request->input('email');
-        $time= $request->input('date').' '.$request->input('time');
+        $date = $request->input('date');
+        $time = $request->input('time');
+        $start = Carbon::parse($date.$time.'Europe/Belgrade');
+        $end = (clone $start)->addHour();
         $event = new Event;
-        $event->name = 'FINAL BULL';
-            $event->description = 'Event description';
-            $event->startDateTime = Carbon::now()->addHour();
-            $event->endDateTime = Carbon::now()->addHour(2);
-            $event->addAttendee(['email' => 'tsudar1991@gmail.com','displayName'=>'Tomislav','comment'=>'Tomislav Sudar\n06383']);
+        $event->name = $name;
+            $event->description = 'Event for Great Services d.o.o. home test';
+            $event->startDateTime = $start;
+            $event->endDateTime = $end;
+            $event->addAttendee(['email' => $email,'comment'=>'Name: Tomislav Sudar tel:'.$phone]);
             $event->sendUpdates ='all';
             $event->reminders=array(
                 'useDefault' => FALSE,
                 'overrides' => array(
-                  array('method' => 'email', 'minutes' => 50),
-                  array('method' => 'email', 'minutes' => 45),
+                  array('method' => 'email', 'minutes' => 60),
+                  array('method' => 'email', 'minutes' => 30),
                 ),);
             
             $event->save('insertEvent',array('sendNotifications' => true, 'conferenceDataVersion' => true));

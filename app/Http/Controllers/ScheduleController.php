@@ -20,11 +20,11 @@ class ScheduleController extends Controller
             'phone'=>'required',
             'email'=>'required',
             'date'=>'required']);
-        $mname=$request->input('name');
+        $name=$request->input('name');
         $phone=$request->input('phone');
-        $memail=$request->input('email');
-        $mtime= $request->input('date').' '.$request->input('time');
-        
+        $email=$request->input('email');
+        $time= $request->input('date').' '.$request->input('time');
+        $event = new Event;
         $event->name = 'FINAL BULL';
             $event->description = 'Event description';
             $event->startDateTime = Carbon::now()->addHour();

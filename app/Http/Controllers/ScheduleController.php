@@ -48,8 +48,8 @@ class ScheduleController extends Controller
         $event->reminders=array(
          'useDefault' => FALSE,
          'overrides' => array(
-            array('method' => 'notification', 'minutes' => 15),
-            array('method' => 'notification', 'minutes' => 30),)
+            array('method' => 'email', 'minutes' => 15),
+            array('method' => 'email', 'minutes' => 30),)
         );
             
         $event->save('insertEvent',array('sendNotifications' => true, 'conferenceDataVersion' => true));

@@ -32,9 +32,10 @@
 
             <div class="form-group">
                 <label for="date">Choose Date:</label>
-                <small class="alert alert-warning" role="alert">
+                <br>
+                <small class="alert alert-primary" role="alert">
                     We are using Eurpe/Belgrade (GMT+1) time zone. Please, choose event date and time accordingly.
-                   </small> 
+                </small> 
                 <input type="date" name="date" class="form-control">
             </div>
 

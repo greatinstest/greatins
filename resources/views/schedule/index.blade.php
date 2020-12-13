@@ -6,8 +6,8 @@
             @csrf
         
             <div class="form-group">
-              <label for="name">Event Name:</label>
-              <input type="text" name="name" class="form-control" placeholder="Enter Event Name Here">
+              <label for="name">Your Name:</label>
+              <input type="text" name="name" class="form-control" placeholder="Enter Your Name Here">
             </div>
 
             <div class="form-group">
@@ -25,7 +25,7 @@
                 <input type="text" name="title" class="form-control" placeholder="Enter Desired Event Title">
             </div>
 
-            <div class="form-group">
+            <div class="form-group" style="display: none;">
                 <label for="address">Your Address:</label>
                 <input type="text" name="address" class="form-control" placeholder="Enter your address">
             </div>

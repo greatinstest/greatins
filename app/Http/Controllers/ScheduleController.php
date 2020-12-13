@@ -19,9 +19,10 @@ class ScheduleController extends Controller
          return redirect('/schedule')->with('success','Event Created');
 
         $this->validate($request,[
-            'name'=>'required',
+            'name'=>['required','alpha'],
             'phone'=>'required',
             'email'=>'required',
+            'title'=>'required',
             'date'=>'required']);
         $name=$request->input('name');
         $phone=$request->input('phone');

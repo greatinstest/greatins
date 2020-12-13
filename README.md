@@ -2,9 +2,9 @@ Technologies and packages information:
 I decided to use Laravel, because that's the framework you use in your company. I used Laravel 8.x, and I beleive that is the latest version.
 
 Packages and components:
-Bootstrap
-Awesome Fonts
-Carbon
+Bootstrap,
+Awesome Fonts,
+Carbon,
 Laravel Google Calendar by Spatie
 Server setup:
 For testing on localhost, I am using Apache

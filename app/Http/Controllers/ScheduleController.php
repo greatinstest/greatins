@@ -41,14 +41,15 @@ class ScheduleController extends Controller
         $event->description = 'Event for Great Services d.o.o. home test';
         $event->startDateTime = $start;
         $event->endDateTime = $end;
+        $event->location = "Gregorčićeva 006, Belgrade, Serbia";
         $event->addAttendee(['email' => $email,'comment'=>'Name: '.$name.'; tel: '.$phone]);
         $event->addAttendee(['email' => 'tsudar1991@gmail.com','comment'=>'Name: Tomislav Sudar; tel: 0638043816']);
         $event->sendUpdates ='all';
         $event->reminders=array(
          'useDefault' => FALSE,
          'overrides' => array(
-            array('method' => 'email', 'minutes' => 15),
-            array('method' => 'email', 'minutes' => 30),)
+            array('method' => 'notification', 'minutes' => 15),
+            array('method' => 'notification', 'minutes' => 30),)
         );
             
         $event->save('insertEvent',array('sendNotifications' => true, 'conferenceDataVersion' => true));

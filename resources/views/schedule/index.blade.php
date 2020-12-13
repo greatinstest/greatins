@@ -21,6 +21,16 @@
             </div>
 
             <div class="form-group">
+                <label for="name">Event Title:</label>
+                <input type="text" name="title" class="form-control" placeholder="Enter Desired Event Title">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Your Address:</label>
+                <input type="text" name="address" class="form-control" placeholder="Enter your address">
+            </div>
+
+            <div class="form-group">
                 <label for="date">Choose Date:</label>
                 <input type="date" name="date" class="form-control">
             </div>

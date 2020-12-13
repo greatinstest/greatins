@@ -15,6 +15,9 @@ class ScheduleController extends Controller
 {
     public function store(Request $request)
     {
+        if ($request->address)
+         return redirect('/schedule')->with('success','Event Created');
+
         $this->validate($request,[
             'name'=>'required',
             'phone'=>'required',

@@ -47,7 +47,7 @@ class ScheduleController extends Controller
         $event->reminders=array(
          'useDefault' => FALSE,
          'overrides' => array(
-            array('method' => 'email', 'minutes' => 60),
+            array('method' => 'email', 'minutes' => 15),
             array('method' => 'email', 'minutes' => 30),)
         );
             

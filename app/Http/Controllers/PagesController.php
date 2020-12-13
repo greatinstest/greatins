@@ -11,10 +11,10 @@ class PagesController extends Controller
     {
         return view('pages.index');
     }
-    public function about()
+    public function documentation()
     {
        
-       return 'about';
+        return view('pages.documentation');
         
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
     @section('content')
-     <h1>Schedule</h1>
-     <div class="jumbotron text-center">
+     <div class="jumbotron text-center" style="width:70%;margin-left:auto;margin-right:auto">
+        <h2>Create Event</h2>
         <form action="{{route('schedule.store')}}" method="POST">
             @csrf
         
@@ -30,25 +30,24 @@
                 <input type="text" name="address" class="form-control" placeholder="Enter your address">
             </div>
 
-            <div class="form-group">
-                <label for="date">Choose Date:</label>
-                <br>
-                <small class="alert alert-primary" role="alert">
+            <div class="form-row">
+                
+            <p style="margin:auto">Choose Date and Time:</p>
+                
+                <div class="alert alert-primary" style="margin-left:auto;margin-right:auto" role="alert">
                     We are using Eurpe/Belgrade (GMT+1) time zone. Please, choose event date and time accordingly.
-                </small> 
-                <input type="date" name="date" class="form-control">
-            </div>
+                </div> 
+                
 
-            <div class="form-group">
-                <label for="date">Choose Time</label>
-                <input type="time" name="time" class="form-control">
-            </div>
-
-           
-            
-            
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
+             <div class="col">
+              <input type="date" name="date" class="form-control">
+             </div>
+             <div class="col">
+              <input type="time" name="time" class="form-control">
+             </div>
+           </div>
+           <hr>
+           <button type="submit" class="btn btn-primary">Create Event</button>
           </form>
      </div>
     @endsection

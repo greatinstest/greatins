@@ -14,7 +14,7 @@
             <a class="nav-link" href="/schedule">Create Event</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/documentation">Documentation</a>
           </li>
           
           

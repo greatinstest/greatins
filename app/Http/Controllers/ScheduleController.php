@@ -29,6 +29,7 @@ class ScheduleController extends Controller
         $name=$request->input('name');
         $phone=$request->input('phone');
         $email=$request->input('email');
+        $title=$request->input('title');
         $date = $request->input('date');
         $time = $request->input('time');
 

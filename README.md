@@ -21,4 +21,4 @@ Source code is available on Git
 
 I decided to deply it here on Heroku, so you can test it right away.
 
-The source code in repository, is exactly the same code which runs this Heroku app.
+The source code in repository, is exactly the same code which runs on Heroku app.

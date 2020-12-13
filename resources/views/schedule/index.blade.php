@@ -27,6 +27,9 @@
 
             <div class="form-group" style="display: none;">
                 <label for="address">Your Address:</label>
+                <small class="alert alert-warning" role="alert">
+                 We are using Eurpe/Belgrade (GMT+1) time zone. Please, choose event date and time accordingly.
+                <small> 
                 <input type="text" name="address" class="form-control" placeholder="Enter your address">
             </div>
 
